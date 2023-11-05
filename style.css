@@ -1,0 +1,138 @@
+/* ---------- GLOBAL ---------- */
+
+@font-face {
+    font-family: 'poney';
+    src: url(font/PonyRides.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- TITLE ---------- */
+
+body{
+    height: 100vh;
+    background-image: url(img/wallpaper.png);
+    font-family: 'poney';
+    text-align: center;
+    padding: 40px;
+}
+h1{
+    font-size: 3.5rem;
+}
+h2{
+    font-size: 2.5rem;
+    color:  transparent;
+    background-image: linear-gradient(90deg, rgba(255,0,0,1) 10%, rgba(255,154,0,1) 20%, rgba(255,226,0,1) 30%, rgba(41,252,126,1) 40%, rgba(0,225,252,1) 50%, rgba(160,0,252,1) 60%, rgba(66,51,246,1) 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* ---------- CAROUSEL-BTN ---------- */
+
+.container{
+    width: 400px;
+    margin:  0 auto;
+    margin-top: 40px;
+}
+.btn-LeftRight{
+    position: absolute;
+    width: 70%;
+    height: 100px;
+    top: 50%;   left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+}
+.btn-LeftRight img{
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+/* ---------- CAROUSEL-SLIDE ---------- */
+
+.album{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.images{
+    display: flex;
+    transition: 1s transform ease-in-out;
+}
+.images > div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.images img{
+    width: 400px;
+    height: 400px;
+}
+
+/* ---------- CAROUSEL-SCRIPTBOX ---------- */
+
+.description-style{
+    width: 350px;
+    height: 0px;
+    background-color: rgb(47, 121, 185);
+    opacity: 0;
+    position: absolute;
+    left: 50%;  top: 0%;
+    transform: translateX(-50%);
+    transition: 1s all ;   
+    border-radius: 30px;
+}
+.description-style-add{
+    width: 350px;
+    height: 380px;
+    background-color: rgb(47, 121, 185);
+    opacity: 0.9;
+    color: white;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    transition: 1s all ;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.description-style-add h3{
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+.description-style-add p{
+    margin: 20px 0px;
+    /* font-size: 1rem; */
+    font-family: sans-serif;
+}
+.puissance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+h4{
+    font-weight: lighter;
+}
+.bgbar{
+    width: 200px;
+    height: 10px;
+    background-color: white;
+    border-radius: 100px;
+    position: relative;
+}
+.bar{
+    width: 10%;
+    height: 10px;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 21%, rgba(255,226,0,1) 43%, rgba(41,252,126,1) 64%, rgba(0,225,252,1) 88%, rgba(160,0,252,1) 100%, rgba(66,51,246,1) 100%);
+    border-radius: 100px;
+    position: absolute;
+    z-index: 1;
+}
